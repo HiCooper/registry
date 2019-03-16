@@ -15,8 +15,13 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
+    hostname: localhost
+    secure-port: 8761
   client:
     registerWithEureka: false
     fetchRegistry: false
+    service-url:
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${eureka.instance.secure-port}/eureka/
+
   server:
     waitTimeInMsWhenSyncEmpty: 0
