@@ -1,0 +1,24 @@
+spring:
+  security:
+    user:
+      name: berry
+      password: pwd123
+
+server:
+  port: 8761
+  undertow:
+    buffer-size: 1024
+    direct-buffers: true
+    io-threads: 4
+    worker-threads: 20
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    metadata-map:
+      zone: dev
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0

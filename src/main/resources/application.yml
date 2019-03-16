@@ -1,26 +1,5 @@
 spring:
   application:
     name: registry
-
-  security:
-    user:
-      name: berry
-      password: pwd123
-
-server:
-  port: 8761
-  undertow:
-    buffer-size: 1024
-    direct-buffers: true
-    io-threads: 4
-    worker-threads: 20
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-  server:
-    waitTimeInMsWhenSyncEmpty: 0
-    remote-region-trust-store-password: pwd123
+  profiles:
+    active: dev
